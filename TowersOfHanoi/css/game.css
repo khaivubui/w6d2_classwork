@@ -47,15 +47,26 @@ table {
 	border-spacing: 0;
 }
 
+h1 {
+  font-size: 180px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hanoi {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 li {
   list-style: none;
-  background-color: #c0392b;
+  background-color: #34495e;
   width: 0;
   height: 50px;
   border-radius: 10px;
@@ -67,8 +78,7 @@ li {
   justify-content: space-around;
   align-items: center;
   width: 300px;
-  height: 400px;
-  background-color: #34495e;
+  height: 200px;
   border-bottom: 10px solid black;
 
 }
