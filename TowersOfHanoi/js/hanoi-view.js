@@ -50,7 +50,7 @@ class View {
         view.render();
         startTowerIdx = undefined;
         endTowerIdx = undefined;
-        $('ul').css('border-color', 'black');
+        $('ul').css('border-color', '#555');
         if (view.game.isWon()) {
           view.$dom.parent().append($('<h1>YOU WON</h1>'));
           $('ul').off('click');
