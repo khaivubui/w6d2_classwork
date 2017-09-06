@@ -1,7 +1,21 @@
 class Snake {
-  constructor () {
+  constructor (board) {
+    this.board = board;
     this.direction = 'D';
     this.segments = [[0,0]];
+  }
+
+  oppositeDirection() {
+    switch (this.direction) {
+      case 'W':
+        return 'S';
+      case 'A':
+        return 'D';
+      case 'S':
+        return 'W';
+      case 'D':
+        return 'A';
+    }
   }
 
   length() {
@@ -35,7 +49,14 @@ class Snake {
   }
 
   move() {
-    this.segments.push(this.coordInFront());
+    const coordInFront = this.coordInFront();
+    const apple = this.board.apple;
+    if (coordInFront[0] === apple[0] &&
+        coordInFront[1] === apple[1]) {
+      this.segments.push(coordInFront);
+      this.board.generateApple();
+    }
+    this.segments.push(coordInFront);
     this.segments.shift();
   }
 }

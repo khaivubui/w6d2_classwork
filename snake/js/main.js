@@ -1,7 +1,7 @@
-const Snake = require('./snake.js');
-const Board = require('./board.js');
+const View = require('./view.js');
+
 
 $(() => {
-  const snake = new Snake();
-  debugger;
+  const $main = $('.snakegame');
+  const v = new View($main);
 });
